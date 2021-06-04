@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DADADA"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+        <TextView
+            android:id="@+id/today"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_google_signin_btn_text_dark_focused"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/todays"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/itemList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="70dp"
+            android:background="#E9E9E9"
+            android:longClickable="false"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:scrollbars="vertical"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/totalCalCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="18dp"
+                    android:layout_weight="1"
+                    android:text="Today's Calorie Count"
+                    android:textColor="@color/common_google_signin_btn_text_light_pressed"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/calCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="18dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+        </LinearLayout>
+
+</LinearLayout>
+
